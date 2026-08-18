@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <title>OUTBREAK RIOT — CAMBODIA TOUR GUIDE</title>
+  <style>
+    :root { --ink:#0a0a0a; --paper:#f0eddf; --acid:#d7ff26; --red:#ff3a2f; --line:#333; --muted:#aaa; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--ink); color:var(--paper); font-family:Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; line-height:1.6; }
+    a { color:var(--acid); text-underline-offset:3px; }
+    .wrap { max-width:1120px; margin:auto; padding:20px; }
+    .hero { min-height:620px; display:grid; grid-template-columns:1.15fr .85fr; overflow:hidden; border:2px solid var(--paper); background:linear-gradient(135deg,#161616,#050505); }
+    .hero-copy { padding:clamp(26px,6vw,76px); display:flex; flex-direction:column; justify-content:space-between; }
+    .eyebrow,.kicker { font-size:.74rem; font-weight:800; letter-spacing:.17em; text-transform:uppercase; color:var(--acid); }
+    h1 { margin:15px 0 0; font-size:clamp(3.4rem,9vw,7.9rem); line-height:.78; letter-spacing:-.09em; text-transform:uppercase; }
+    h1 span { display:block; color:var(--acid); }
+    .date { margin:28px 0 0; font-size:clamp(1.15rem,2vw,1.6rem); font-weight:700; }
+    .tagline { max-width:34rem; margin:45px 0 0; color:#d2d2d2; }
+    .art { min-height:360px; background:url('outbreak-riot-artwork.png') center/cover no-repeat; filter:grayscale(1) contrast(1.16); }
+    .notice { border:1px solid var(--acid); margin:22px 0 34px; padding:18px 20px; color:var(--acid); font-weight:bold; }
+    nav { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 34px; }
+    nav a { color:var(--paper); text-decoration:none; border:1px solid #555; padding:7px 12px; font-size:.82rem; font-weight:bold; }
+    nav a:hover { background:var(--acid); color:var(--ink); border-color:var(--acid); }
+    .section-title { margin:54px 0 18px; border-top:3px solid var(--acid); padding-top:9px; font-size:clamp(1.65rem,4vw,2.7rem); line-height:1; letter-spacing:-.04em; text-transform:uppercase; }
+    .section-title small { display:block; margin-top:8px; color:var(--muted); font-size:.75rem; letter-spacing:.12em; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .card { background:#171717; border:1px solid var(--line); padding:22px; }
+    .card h3 { margin:0 0 9px; color:var(--acid); font-size:1.12rem; }
+    .card p,.card ul { margin:8px 0; }
+    .card ul { padding-left:1.15em; }
+    .status { display:inline-block; margin:0 0 10px; padding:2px 7px; background:var(--red); color:#fff; font-size:.7rem; font-weight:bold; letter-spacing:.09em; }
+    .timeline { border-left:2px solid var(--paper); margin-left:8px; }
+    .day { position:relative; padding:0 0 30px 28px; }
+    .day:before { content:""; position:absolute; left:-9px; top:3px; width:14px; height:14px; border:2px solid var(--ink); background:var(--acid); transform:rotate(45deg); }
+    .day time { color:var(--acid); font-weight:800; letter-spacing:.08em; }
+    .day h3 { margin:2px 0 7px; font-size:1.3rem; }
+    .day p { margin:0; color:#d2d2d2; }
+    .table { width:100%; border-collapse:collapse; background:#141414; }
+    th,td { padding:14px; border:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { width:27%; color:var(--acid); }
+    .callout { padding:21px; background:var(--paper); color:var(--ink); font-weight:600; }
+    .callout strong { color:#c12019; }
+    footer { margin:58px 0 12px; padding-top:16px; border-top:1px solid #444; color:#9d9d9d; font-size:.82rem; }
+    @media (max-width:720px) { .wrap{padding:12px}.hero{grid-template-columns:1fr}.hero-copy{min-height:440px}.art{min-height:320px}.grid{grid-template-columns:1fr} th{width:39%} }
+    @media print { body{background:white;color:black}.wrap{max-width:none}.hero,.card,.table{background:white;color:black}.section-title{color:black}.art{filter:grayscale(1)} a{color:black}.notice{color:black;border-color:black}.card h3,.day time,th,.eyebrow{color:black} }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="hero-copy">
+        <div>
+          <div class="eyebrow">Field Guide / Cambodia</div>
+          <h1>Outbreak<span>Riot</span></h1>
+          <p class="date">CAMBODIA TOUR<br>OCT 30 — NOV 3</p>
+          <p class="tagline">6人で行く、カンボジア遠征。移動・宿・遺跡・ライブ当日まで、必要な情報を一枚に。</p>
+        </div>
+        <div class="kicker">Game Of Death / On The Road</div>
+      </div>
+      <div class="art" role="img" aria-label="Outbreak Riot artwork"></div>
+    </header>
+
+    <p class="notice">FLIGHT INFORMATION: TODO　航空券・集合時間・手荷物条件は決まり次第ここへ追記。</p>
+
+    <nav aria-label="ページ内メニュー"><a href="#schedule">日程</a><a href="#stay">宿泊</a><a href="#transfer">移動</a><a href="#angkor">アンコールワット</a><a href="#money">費用メモ</a><a href="#checklist">出発前</a></nav>
+
+    <section id="schedule">
+      <h2 class="section-title">Schedule <small>予定 / 未確定部分は要確認</small></h2>
+      <div class="timeline">
+        <article class="day"><time>10/30</time><h3>プノンペン着・ホテルチェックイン</h3><p>ツイン3部屋・2泊。空港送迎はリクエスト済み。</p></article>
+        <article class="day"><time>10/31</time><h3>プノンペン滞在</h3><p>昼間にトゥールスレンへ行く場合、ホテルにトゥクトゥク手配を相談可能。</p></article>
+        <article class="day"><time>11/01</time><h3>プノンペン → シェムリアップ</h3><p>8:45発のバス。ホテルからバス停まではタクシー移動。荷物は<strong>20kgまで</strong>。</p></article>
+        <article class="day"><time>11/02</time><h3>アンコールワット・午前半日ツアー</h3><p>5:00頃ホテル発、12:00頃帰着。午後以降はライブ／主催者スケジュールを確認。</p></article>
+        <article class="day"><time>11/03</time><h3>シェムリアップ発</h3><p>宿泊は2泊。帰路・航空便の詳細は TODO。</p></article>
+      </div>
+    </section>
+
+    <section id="stay">
+      <h2 class="section-title">Stay <small>宿泊</small></h2>
+      <div class="grid">
+        <article class="card"><h3>10/30 — 11/01｜プノンペン</h3><ul><li>ツイン × 3部屋／2泊</li><li>空港送迎リクエスト済み</li><li>目安：1人 3,500円</li><li>送迎：約20 USドル</li></ul><p>いったんバンドの財布から精算。</p><p><a href="https://maps.app.goo.gl/LyKnfZhfqP74ZvEh9?g_st=al" target="_blank" rel="noopener">ホテルの地図を開く ↗</a></p></article>
+        <article class="card"><h3>11/01 — 11/03｜シェムリアップ</h3><ul><li>2泊は主催者が手配</li><li>ライブ当日の宿泊分は主催者負担予定</li><li>アンコールツアー案内の宿泊先：<strong>Darling Pub Hostel</strong></li></ul><p>部屋・朝食の条件と、ライブ当日以外の精算範囲を確認しておく。</p></article>
+      </div>
+    </section>
+
+    <section id="transfer">
+      <h2 class="section-title">Transfer <small>都市間移動</small></h2>
+      <div class="grid"><article class="card"><span class="status">11/01 · 08:45 DEPARTURE</span><h3>バス｜プノンペン → シェムリアップ</h3><p>ホテルからバス停までタクシーで移動。預け荷物の上限は <strong>20kg</strong>。</p><p>バス代：約17,000円。こちらもバンドの財布から。</p><p><a href="https://12go.asia/en/ticket-new/29970450" target="_blank" rel="noopener">予約ページを開く ↗</a><br><a href="https://maps.app.goo.gl/N5ZbHVRLEWriutnc9?g_st=al" target="_blank" rel="noopener">バス停の地図を開く ↗</a></p></article><aside class="callout">荷物は出発前に計量。<strong>20kg超過を避ける</strong>ため、機材・物販・衣類の配分を事前に決める。</aside></div>
+    </section>
+
+    <section id="angkor">
+      <h2 class="section-title">Angkor Wat <small>11/02｜日本語ガイド・専用車</small></h2>
+      <div class="grid"><article class="card"><h3>午前半日プラン</h3><ul><li>5:00頃　ホテルお迎え</li><li>アンコールワットで朝日鑑賞</li><li>アンコールワット内部（第1・第2・第3回廊）</li><li>アンコールトム</li><li>タ・プローム遺跡</li><li>12:00頃　ホテルお送り</li></ul></article><article class="card"><h3>予約・朝食</h3><p>参加：大人6名</p><p>朝食付きなら、前日までにホテルへ <strong>Breakfast Box</strong> を頼めるか確認。用意できない場合、遺跡周辺で朝食を注文可能（目安 3〜5 USドル）。</p><p>ツアー内容・料金に問題なければ、ガイドのマンさんへ予約依頼。</p></article></div>
+    </section>
+
+    <section id="money">
+      <h2 class="section-title">Money Note <small>金額は現時点のメモ／最終精算前</small></h2>
+      <table class="table"><tbody><tr><th>プノンペン宿</th><td>1人あたり 3,500円（メモ記載額）</td><td>バンド財布から一時立替</td></tr><tr><th>空港送迎</th><td>約20 USドル</td><td>総額・分担は要確認</td></tr><tr><th>都市間バス</th><td>約17,000円</td><td>メモ記載額。人数あたり／総額を要確認</td></tr><tr><th>アンコールツアー</th><td>6名合計 150 USドル（1人 25 USドル）</td><td>日本語ガイド、専用車、水を含む</td></tr><tr><th>アンコールパス</th><td>1人 37 USドル（1日券）</td><td>ツアー料金に含まれない</td></tr><tr><th>朝食</th><td>3〜5 USドル程度</td><td>ホテルの朝食BOXが不可の場合の目安</td></tr></tbody></table>
+    </section>
+
+    <section id="checklist">
+      <h2 class="section-title">Before Departure <small>出発前チェック</small></h2>
+      <div class="grid"><article class="card"><h3>全員で確認</h3><ul><li>航空便、集合時刻、座席、預け荷物</li><li>パスポートの有効期限・入国条件</li><li>バス予約内容と荷物20kg制限</li><li>海外旅行保険・緊急連絡先</li><li>現金（USドル／現地通貨）とカード</li></ul></article><article class="card"><h3>現地で確認</h3><ul><li>トゥールスレン行きのトゥクトゥク手配</li><li>11/2朝食BOXの可否</li><li>シェムリアップ宿の部屋・朝食・精算範囲</li><li>ライブ会場入り時間、機材、物販、送迎</li><li>立替分の記録・精算</li></ul></article></div>
+    </section>
+    <footer>OUTBREAK RIOT / CAMBODIA TOUR GUIDE — last compiled from the band memo. Print-friendly and mobile-ready.</footer>
+  </main>
+</body>
+</html>
